@@ -1,0 +1,97 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  font-size: 16px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Login Page */
+.login-container {
+  max-width: 400px;
+  margin: 60px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  color: #d32f2f;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #d32f2f;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.login-container button:hover {
+  background-color: #b71c1c;
+}
+
+#login-status {
+  margin-top: 10px;
+  color: red;
+  font-weight: bold;
+}
+
+/* Dashboard */
+.dashboard {
+  padding: 40px;
+}
+
+.dashboard h2 {
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+
+.status-active {
+  color: green;
+  font-weight: bold;
+}
+
+.status-expired {
+  color: red;
+  font-weight: bold;
+}
+
+.recharge-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #ff6600;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.recharge-btn:hover {
+  background-color: #cc5200;
+}

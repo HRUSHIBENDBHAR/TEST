@@ -1,0 +1,140 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Traio Payment Page</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .poster {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .poster img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .pay-btn,
+    .option-btn {
+      padding: 15px 30px;
+      background-color: #ff6600;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 10px;
+      transition: 0.3s;
+    }
+    .option-btn:hover,
+    .pay-btn:hover {
+      background-color: #cc5200;
+    }
+    .payment-options,
+    .image-display {
+      margin-top: 20px;
+    }
+    table {
+      width: 100%;
+      margin-top: 30px;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+    th {
+      background-color: #d32f2f;
+      color: white;
+    }
+    .checkmark {
+      color: green;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="poster">
+    <h2>Welcome to Traio Networks Payment Gateway</h2>
+    <p>Serving regional Pune with high-speed internet and TV bundles</p>
+    <img src="images/detail.jpg" alt="Poster" />
+    <img src="images/OFFER.jpg" alt="Offer" />
+    <p>Click below to choose your plan and recharge</p>
+    <button class="pay-btn" onclick="showOptions()">Pay Now</button>
+
+    <div id="payment-options" class="payment-options" style="display:none;">
+      <button class="option-btn" onclick="selectPlan(499)">₹499</button>
+      <button class="option-btn" onclick="selectPlan(799)">₹799</button>
+      <button class="option-btn" onclick="selectPlan(999)">₹999</button>
+    </div>
+
+    <div id="image-display" class="image-display" style="display:none;">
+      <img id="plan-img" src="" alt="Plan Image" width="100%" />
+    </div>
+
+    <table>
+      <tr>
+        <th>Plan</th>
+        <th>₹499</th>
+        <th>₹799</th>
+        <th>₹999</th>
+      </tr>
+      <tr>
+        <td>Internet Speed</td>
+        <td>30 Mbps</td>
+        <td>50 Mbps</td>
+        <td>100 Mbps</td>
+      </tr>
+      <tr>
+        <td>TV Channels</td>
+        <td class="checkmark">✔</td>
+        <td class="checkmark">✔</td>
+        <td class="checkmark">✔</td>
+      </tr>
+      <tr>
+        <td>OTT Subscriptions</td>
+        <td>7 + 1 Premium</td>
+        <td>7 + 1 Premium</td>
+        <td>7 + 1 Premium</td>
+      </tr>
+      <tr>
+        <td>Free Devices</td>
+        <td>–</td>
+        <td>–</td>
+        <td>–</td>
+      </tr>
+    </table>
+    <h3>Thanks for choosing Traio Networks!</h3>
+  </div>
+
+  <script>
+    function showOptions() {
+      document.getElementById("payment-options").style.display = "block";
+    }
+
+    function selectPlan(amount) {
+      const imageDisplay = document.getElementById("image-display");
+      const planImg = document.getElementById("plan-img");
+
+      if (amount === 499) {
+        planImg.src = "images/499.jpg";
+        window.location.href = "https://pay.getshopay.com/eTtUIKZHsoNvoncPTBUV";
+      } else if (amount === 799) {
+        planImg.src = "images/799.jpg";
+      } else if (amount === 999) {
+        planImg.src = "images/999.jpg";
+      }
+
+      imageDisplay.style.display = "block";
+    }
+  </script>
+</body>
+</html>
